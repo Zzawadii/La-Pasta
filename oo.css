@@ -1,0 +1,408 @@
+/* ===== Global Theme & Base Typography ===== */
+body {
+    padding-top: 100px;
+    /* space for navbar */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    line-height: 1.6;
+    font-size: 1.08rem;
+    background-color: #fdfcf9;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    color: black;
+    font-size: 2.15rem;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    padding: 25px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(7px);
+    border-radius: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.logo-circle {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+    transition: all 0.3s ease;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+}
+
+/* ===== Section Dividers ===== */
+.divider {
+    text-align: center;
+    border-top: 2px solid #bba680;
+    width: 140px;
+    margin: 50px auto 30px auto;
+}
+
+.divider span {
+    background: #fdfcf9;
+    position: relative;
+    top: -16px;
+    padding: 0 15px;
+    color: #c5a059;
+    font-size: 1.45rem;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+
+.intro-text {
+    max-width: 850px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    font-size: 1.08rem;
+    color: #555;
+}
+
+/* ===== Info Circles Layout ===== */
+.info-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.circle {
+    width: 125px;
+    height: 125px;
+    border: 2px solid #c5a059;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 25px;
+}
+
+.info-content h3 {
+    font-size: 0.98rem;
+    margin-bottom: 10px;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+.info-content p {
+    font-size: 0.93rem;
+    margin: 0;
+}
+
+/* ===== Story Section ===== */
+.story-section {
+    padding: 80px 10%;
+    background-color: #fff;
+}
+
+.story-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.script-font {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 2.75rem;
+    color: #c5a059;
+    display: block;
+    margin-bottom: -10px;
+}
+
+.story-header h2 {
+    text-align: left;
+    margin: 0;
+    font-size: 2.15rem;
+    letter-spacing: 4px;
+}
+
+.small-divider {
+    color: #c5a059;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.story-text p {
+    font-size: 1.08rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* ===== Pasta Grid ===== */
+.menu-section {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.pasta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pasta-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.pasta-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.pasta-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.pasta-card p {
+    font-size: 0.96rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #555;
+    flex-grow: 1;
+}
+
+.more-link {
+    color: #c5a059;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== Footer ===== */
+.contact-footer {
+    background-color: #2b1d16;
+    color: #d8c3a5;
+    padding: 80px 20px 40px;
+    margin-top: 120px;
+    margin-bottom: 0;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.85rem;
+    border-top: 1px solid #444;
+    padding-top: 30px;
+    margin-bottom: 0;
+}
+
+.bottom-right-link {
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #c5a059;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.bottom-right-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* ===== Responsive Styles ===== */
+
+/* 1024px */
+@media (max-width: 1024px) {
+    .pasta-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+    .story-container {
+        flex-direction: column;
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .circle {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .story-images {
+        margin-top: 0;
+    }
+}
+
+/* 480px - Mobile / Hamburger menu */
+@media (max-width: 480px) {
+
+    /* Hamburger shows */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide navbar links by default */
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        margin-top: 10px;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        padding: 15px 0;
+    }
+
+    /* Show links when active */
+    .navbar ul.active {
+        display: flex;
+    }
+
+    /* Adjust logo */
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .logo-circle {
+        padding: 4px 6px;
+        font-size: 0.9rem;
+    }
+}

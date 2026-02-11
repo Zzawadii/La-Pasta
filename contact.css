@@ -1,0 +1,383 @@
+/* --- Reset & Global Fixes --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    position: relative;
+    /* scrolls with page */
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    /* fully see-through */
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.logo-circle {
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #c59d5f;
+}
+
+/* Hamburger Icon for Mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* ===== Hero Section ===== */
+.contact-hero {
+    display: block;
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 60px;
+    padding-top: 0;
+    text-align: center;
+}
+
+.hero-text {
+    max-width: 750px;
+    margin: 60px auto 0 auto;
+    /* push below navbar */
+    line-height: 1.6;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    font-size: 1.15rem;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Main Layout --- */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-content {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Info Cards */
+.contact-info {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    min-width: 400px;
+}
+
+.info-card {
+    background-color: #f9f6f2;
+    padding: 45px 20px;
+    text-align: center;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5d4347;
+}
+
+.icon-box svg {
+    width: 42px;
+    height: 42px;
+}
+
+.info-card h3 {
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: #8e8e8e;
+    font-size: 1rem;
+}
+
+/* Reservation Form */
+.reservation-form-container {
+    flex: 1.5;
+    min-width: 400px;
+    background: #fff;
+    padding: 10px 0;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header .subtitle {
+    font-family: 'Playfair Display', cursive;
+    font-style: italic;
+    color: #c59d5f;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.form-header .form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.reservation-form .form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.reservation-form input,
+.reservation-form select {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 12px 5px;
+    font-size: 0.95rem;
+    color: #666;
+    background: transparent;
+    outline: none;
+}
+
+.select-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: '⌵';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c59d5f;
+    pointer-events: none;
+    font-size: 0.8rem;
+}
+
+.single-col {
+    width: 100%;
+}
+
+.form-footer-action {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.make-reservation-btn {
+    background-color: #c59d5f;
+    color: white;
+    padding: 16px 45px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.make-reservation-btn:hover {
+    background-color: #b08b52;
+}
+
+/* ===== Footer ===== */
+.contact-footer {
+    background-color: #2b1d16;
+    color: #d8c3a5;
+    padding: 80px 20px 40px;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.85rem;
+    border-top: 1px solid #444;
+    padding-top: 30px;
+}
+
+/* ===== Responsive Styles ===== */
+
+/* Navbar & Layout <= 900px */
+@media (max-width: 900px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .reservation-form-container {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* Form rows <= 600px */
+@media (max-width: 600px) {
+    .reservation-form .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* ===== Navbar Hamburger for Mobile <=480px ===== */
+@media (max-width: 480px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+    }
+
+    /* Hide links by default */
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        margin-top: 10px;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        padding: 15px 0;
+    }
+
+    /* Show when active */
+    .navbar ul.active {
+        display: flex;
+    }
+
+    /* Logo adjustments */
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .logo-circle {
+        padding: 4px 6px;
+        font-size: 0.9rem;
+    }
+}

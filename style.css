@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+/* ===== Body ===== */
+body {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("home.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Logo ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.logo-circle {
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.3);
+    /* subtle background to show menu on scroll */
+}
+
+/* Navbar links */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+/* Hamburger Icon (hidden on desktop) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* ===== Section ===== */
+section {
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 700px;
+    padding: 0 8%;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+button {
+    background-color: white;
+    color: #1a1a1a;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: fit-content;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Tablets ≤ 1024px */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 20px 6%;
+    }
+
+    .navbar ul {
+        gap: 25px;
+    }
+}
+
+/* Small tablets / large phones ≤ 768px */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    section {
+        padding: 0 6%;
+    }
+
+    button {
+        padding: 12px 30px;
+    }
+
+    body {
+        background-attachment: scroll;
+        background-position: top center;
+    }
+}
+
+/* Mobile phones ≤ 480px */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Navbar becomes logo + hamburger only */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 5%;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar ul {
+        display: none;
+        /* hide links by default */
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .navbar ul.active {
+        display: flex;
+        /* show when hamburger clicked */
+    }
+
+    /* Show hamburger on mobile */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Logo smaller */
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .logo-circle {
+        padding: 4px 6px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 0 5%;
+        max-width: 100%;
+    }
+
+    button {
+        padding: 10px 25px;
+        font-size: 0.85rem;
+    }
+}
